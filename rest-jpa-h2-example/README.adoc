@@ -19,9 +19,6 @@ Then add two or more books to the database at ternimal with containers.:
 ----
 curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"name":"Disparity based space variant image deblurring, Signal Processing: Image Communication","author":"ChangsooJe,HyeonSangJeon,ChangHwanSon,HyungMinPark", "pages":792'} http://localhost:8989/book/add
 ----
-curl -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"name": "The Practice of System and Network Administration", "author":"Thomas A. Limoncelli, Christina J. Hn, Strata R. Chalup"}' http://localhost:8989/book/add
-----
-
 
 You should now be able to see your all book saved:
 
