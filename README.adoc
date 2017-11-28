@@ -1,0 +1,7 @@
+= springboot-examples
+
+These projects present how Springboot can use.
+
+== rest-jpa-h2-example
+
+The link:springboot-examples/README.adoc[rest-jpa-h2-example] shows simple restful API  in a Spring Boot application.
