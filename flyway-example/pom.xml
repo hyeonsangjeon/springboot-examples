@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>actuator-example</artifactId>
+  <artifactId>flyway-example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   
-  <name>actuator-example</name>  
+  <name>flyway-example</name>  
   <description>actuator Demo Project for Spring Boot</description>
   
   <parent>
