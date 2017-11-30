@@ -19,7 +19,7 @@ public class ActuatorController {
   //Index
   @RequestMapping(value="/", method = RequestMethod.GET)
   public ResponseEntity<String> index(){	  	  
-	  return new ResponseEntity<>("Welcome Springboot flyway", HttpStatus.OK);
+	  return new ResponseEntity<>("Welcome Springboot liquibase", HttpStatus.OK);
   }
   
   //@Bean CommandLineRunner means that it will run after the springboot autoconfiguration.
