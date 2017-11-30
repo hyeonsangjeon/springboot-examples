@@ -1,0 +1,34 @@
+# springboot flyway
+
+This example shows how to use flyway in springboot to manage the history of changes to the database schema as a result of application changes., having:
+
+- Spring flyway h2-db(embeded), mysql
+- Spring actuator flyway migration state
+- Spring @Bean CommandLineRunner check
+
+
+To try the example, execute this command in a terminal:
+As running container, it runs two sql files.  DML sql file consists of five lines of book information.
+You should now be able to see migration infomation in terminal spring log after the beans autoconfiguration.
+
+[source,shell]
+----
+mvn clean spring-boot:run
+----
+
+You can check flyway migration state in springboot actuator after container running complete:
+
+[source,shell]
+----
+http://localhost:7979/actuator/flyway
+----
+
+
+Let 's see springboot embeded h2-console UI:
+
+[source,shell]
+----
+http://localhost:8989/h2-console
+----
+
+If you want to test your own mysql server, change spring.datasource configuration in application.properties
