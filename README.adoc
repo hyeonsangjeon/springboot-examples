@@ -13,3 +13,7 @@ The link:flyway-example/README.adoc[flyway-example] shows Spring Boot flyway.
 == liquibase-example
 
 The link:liquibase-example/README.adoc[liquibase-example] shows Spring Boot liquibase.
+
+== docker-example
+
+The link:docker-example/README.adoc[docker-example] shows Spring Boot docker image bake and run.
