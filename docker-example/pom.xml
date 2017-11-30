@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>docker-example</artifactId>
+  <version>0.2</version>
+  <!-- Let's make jar file to upload into docker container-->
+  <packaging>jar</packaging>
+  
+  <name>docker-example</name>
+  <description>docker Demo Project for Spring Boot</description>
+  
+  <parent>
+      <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-parent</artifactId>
+      <version>1.5.8.RELEASE</version>
+  </parent>
+  
+ 
+  <properties>
+  	  <!-- Spring docker example shuold be add docker image prefix for build -->  
+  	  <docker.image.prefix>springboot</docker.image.prefix>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <java.version>1.8</java.version>      
+  </properties>
+  
+  <dependencies>
+       <!-- Spring Actuator for Web Monitoring -->  
+	  <dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-web</artifactId>
+	  </dependency>
+	  <dependency>
+	      <groupId>com.h2database</groupId>
+		  <artifactId>h2</artifactId>		  
+	  </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>      	
+      	<scope>test</scope>
+    	  </dependency>
+  </dependencies>
+  <build>
+      <plugins>
+      	<!-- This Spring plugin helps eliminate error like "no main manifest attribute X.jar"-->	
+      	  <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+      	<!-- Spring docker plugin-->	
+          <plugin>
+		   	<groupId>com.spotify</groupId>
+		   	<artifactId>docker-maven-plugin</artifactId>
+		   	<version>0.4.14</version>
+		   	<configuration>
+		        <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+		      	<dockerDirectory>src/main/resources/docker</dockerDirectory>
+		      	<resources>
+		            <resource>
+		            	    <targetPath>/</targetPath>
+		            		<directory>${project.build.directory}</directory>
+		            		<include>${project.build.finalName}.jar</include>
+		         	</resource>
+		      	</resources>
+		    </configuration>
+          </plugin>
+      </plugins>      
+  </build>
+ 
+</project>

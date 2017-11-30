@@ -1,0 +1,59 @@
+# Spring Boot docker example
+
+This example shows how to make docker image build and run in springboot , having:
+
+- Spring Boot DockerFile
+- How to add Maven docker plugin
+
+ 
+To try the example, you need to have a docker installed on your OS. [1]
+
+
+After docker installation, execute this command to bake a docker image in a terminal:
+
+[source,shell]
+----
+mvn clean package docker:build -DskipTests=true;
+----
+
+Let's make sure that the build is normally done.:  
+[source,shell]
+----
+docker images
+----
+
+To run docker, excute this command in a ternimal:
+ 
+[source,shell]
+----
+docker run -d --name hellodocker -p 8989:8989 springboot/docker-example
+----
+
+Check rest index call :
+[source,shell]
+----
+http://localhost:8989
+----
+
+If you want to get into docker container os, excute this command [2] :
+----
+docker exec -i -t hellodocker /bin/bash
+----
+
+
+docker options are as follows,
+----
+run : run  
+-d : background run 
+-p : expose port conainer core-os port to your os (port fowarding)
+--name : container nickname
+exec : excute 
+-i : enable bash standard input (stdin)
+-t : using bash TTY mode (pseudo-TTY)
+----
+
+Reference
+----
+[1]. https://docs.docker.com/engine/installation/
+[2]. https://docs.docker.com/engine/reference/commandline/cli/#environment-variables
+----

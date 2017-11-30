@@ -11,5 +11,6 @@
 		<module>rest-jpa-h2-example</module>
     		<module>actuator-example</module>
         <module>liquibase-example</module>
-  </modules>
+        <module>docker-example</module>
+	</modules>
 </project>
