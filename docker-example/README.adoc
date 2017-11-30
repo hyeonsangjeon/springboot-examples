@@ -6,7 +6,7 @@ This example shows how to make docker image build and run in springboot , having
 - How to add Maven docker plugin
 
  
-To try the example, you need to have a docker installed on your OS. [1]
+To try the example, you need to have a docker installed on your OS. And needed sudoers account permission[1]
 
 
 After docker installation, execute this command to bake a docker image in a terminal:
