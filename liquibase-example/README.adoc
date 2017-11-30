@@ -16,7 +16,7 @@ You should now be able to see migration infomation in terminal spring log after 
 mvn clean spring-boot:run
 ----
 
-The difference from thos examples flyway method is table creation process owner is going to in liquibase includes validation, not in JPA. So, hibernate validation settings should be turned off as shown below. 
+The difference between this example and "flyway example" is table migration process owner is liquibase, not JPA. liquibase will include validation. Therefore, you must turn off the Hibernate Validation setting as follows:  
 [source,shell]
 ----
 spring.jpa.hibernate.ddl-auto = none
@@ -41,4 +41,4 @@ If you want to test your own mysql server, change spring.datasource configuratio
 
 
 Reference
-[1]. http://www.liquibase.org/documentation/changes/
+- [1]. http://www.liquibase.org/documentation/changes/

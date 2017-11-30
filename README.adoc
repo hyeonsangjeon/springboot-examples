@@ -6,6 +6,10 @@ These projects present how Springboot can use.
 
 The link:rest-jpa-h2-example/README.adoc[rest-jpa-h2-example] shows simple restful API  in a Spring Boot application.
 
-== actuator-example
+== flyway-example
 
-The link:actuator-example/README.adoc[actuator-example] shows Spring Boot actuator module.
+The flyway-example/README.adoc[flyway-example] shows Spring Boot flyway.
+
+== liquibase-example
+
+The liquibase-example/README.adoc[liquibase-example] shows Spring Boot liquibase.
