@@ -1,4 +1,4 @@
-= springboot-examples
+= Spring Boot Examples
 
 These projects present how Springboot can use.
 

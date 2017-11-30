@@ -1,4 +1,4 @@
-# rest-jpa-h2-example
+# Spring Boot rest-server example
 
 This example shows how you can make MVC REST API Spring Boot, having:
 

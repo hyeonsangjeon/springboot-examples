@@ -1,0 +1,44 @@
+# Spring Boot liquibase example
+
+This example shows how to use liquibase in springboot to manage the history of changes to the database schema as a result of application changes., having:
+
+- Spring liquibase h2-db(embeded), mysql
+- Spring actuator liquibase migration state
+- Spring @Bean CommandLineRunner check
+
+
+To try the example, execute this command in a terminal:
+As running container, it runs two sql files.  DML sql file consists of five lines of book information.
+You should now be able to see migration infomation in terminal spring log after the beans autoconfiguration.
+
+[source,shell]
+----
+mvn clean spring-boot:run
+----
+
+The difference from thos examples flyway method is table creation process owner is going to in liquibase includes validation, not in JPA. So, hibernate validation settings should be turned off as shown below. 
+[source,shell]
+----
+spring.jpa.hibernate.ddl-auto = none
+----
+
+You can check liquibase migration state in springboot actuator after container running complete:
+
+[source,shell]
+----
+http://localhost:7979/actuator/liquibase
+----
+
+
+Let 's see springboot embeded h2-console UI:
+You can check the operation history in DATABASECHANGELOG table created after migration.
+[source,shell]
+----
+http://localhost:8989/h2-console
+----
+
+If you want to test your own mysql server, change spring.datasource configuration in application.properties
+
+
+Reference
+[1]. http://www.liquibase.org/documentation/changes/

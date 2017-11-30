@@ -1,4 +1,4 @@
-# springboot flyway
+# Spring Boot flyway example
 
 This example shows how to use flyway in springboot to manage the history of changes to the database schema as a result of application changes., having:
 

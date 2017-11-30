@@ -10,5 +10,6 @@
 	<modules>
 		<module>rest-jpa-h2-example</module>
     		<module>actuator-example</module>
-    </modules>
+        <module>liquibase-example</module>
+  </modules>
 </project>
