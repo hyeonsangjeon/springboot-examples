@@ -24,7 +24,7 @@ public class Book {
 	private Long Id ;
 	
 	private String name = "";
-	private String author = "";
+	private String author = "";	
     private int pages;
     
     //JPA Entities
