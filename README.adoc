@@ -8,8 +8,8 @@ The link:rest-jpa-h2-example/README.adoc[rest-jpa-h2-example] shows simple restf
 
 == flyway-example
 
-The flyway-example/README.adoc[flyway-example] shows Spring Boot flyway.
+The link:flyway-example/README.adoc[flyway-example] shows Spring Boot flyway.
 
 == liquibase-example
 
-The liquibase-example/README.adoc[liquibase-example] shows Spring Boot liquibase.
+The link:liquibase-example/README.adoc[liquibase-example] shows Spring Boot liquibase.
