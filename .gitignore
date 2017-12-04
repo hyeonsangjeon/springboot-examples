@@ -16,6 +16,8 @@ local.properties
 .recommenders
 .checkstyle
 log_data/
+*.log
+
 
 # External tool builders
 .externalToolBuilders/
