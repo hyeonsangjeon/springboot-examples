@@ -1,6 +1,6 @@
 # Spring Boot logback example
 
-This example shows how to set logback in springboot to make the archive of daily log file to the application as a result of application daily logging., having:
+This example shows how to set logback in springboot to make the archive of daily log file with sql result to the application as a result of application daily logging., having:
 
 - Spring logging to JDBC SQL, h2-db(embeded), mysql
 - Spring daily logback setting using log4jdbc
