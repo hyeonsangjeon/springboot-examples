@@ -1,0 +1,42 @@
+# Spring Boot logback example
+
+This example shows how to set logback in springboot to make the archive of daily log file to the application as a result of application daily logging., having:
+
+- Spring logging to JDBC SQL, h2-db(embeded), mysql
+- Spring daily logback setting using log4jdbc
+ 
+ 
+To try the example, execute this command in a terminal:
+As running container, it runs two sql files.  DML, DCL sql file.(same flyway-example)
+You should now be able to see migration infomation in terminal jdbc sql log.
+
+[source,shell]
+----
+mvn clean spring-boot:run
+----
+
+You can also see sql query in springboot rest call:
+
+[source,shell]
+----
+http://localhost:8989
+----
+
+using logback options are as follows,
+----
+- dailyRollingFileAppender : For setting the daily log update file
+- fileNamePattern : rollover settings , using the OS daily file changing with yyyy-mm-dd. The currently active log file is used by fileNamePattern to be the same as the file name of the current period calculated by OS date kernel 
+- maxHistory: Allow maximum number of log file directories
+- ThresholdFilter : Setting the appender's log threshold: Setting logs below the appender's threshold are not shown. 
+----
+
+using log4jdbc options are as follows,
+----
+- jdbc.sqlonly : Only SQL statements are logged, and in the case of PreparedStatement, SQL statements replaced with the related argument values are shown. 
+- jdbc.sqltiming : It contains the SQL statement and the time information (milliseconds) taken to execute the SQL. 
+- jdbc.audit : All JDBC Log information except ResultSet. We do not recommend using it unless there is a need to track JDBC problems, especially because large amounts of logs are generated.
+- jdbc.resultset : All JDBC call information, including ResultSet, is logged, creating a very large amount of logs. no recomened
+- jdbc.resultsettable : SQL Result Logs a table of queried data.
+----
+
+In JDBC setting, driverClassName and url are different from the flyway-example example in the spring datasource configuration.

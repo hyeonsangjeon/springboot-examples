@@ -12,5 +12,6 @@
     		<module>actuator-example</module>
         <module>liquibase-example</module>
         <module>docker-example</module>
-	</modules>
+    <module>logback-example</module>
+  </modules>
 </project>
