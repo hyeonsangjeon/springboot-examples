@@ -15,7 +15,7 @@ local.properties
 .loadpath
 .recommenders
 .checkstyle
-
+log_data/
 
 # External tool builders
 .externalToolBuilders/
