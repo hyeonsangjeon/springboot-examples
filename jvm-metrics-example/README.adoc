@@ -1,4 +1,4 @@
-# Spring Boot logback example
+# Spring Boot jvm metrics example
 
 This example shows how to use Actuator Metrics module with CounterService and GaugeService to the application., having:
 The function of this module is to use a counter or gauge to get the number of visits to the app or statistics and thresholds for a specific situation.
