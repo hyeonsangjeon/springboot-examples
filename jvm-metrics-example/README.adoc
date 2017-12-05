@@ -1,0 +1,44 @@
+# Spring Boot logback example
+
+This example shows how to use Actuator Metrics module with CounterService and GaugeService to the application., having:
+The function of this module is to use a counter or gauge to get the number of visits to the app or statistics and thresholds for a specific situation.
+
+- Spring Actuator Metrics
+- CounterService to accumulate request count
+- GaugeService to detect the private threshold of process awating time
+ 
+ 
+To try the example, execute this command in a terminal:
+[source,shell]
+----
+mvn clean spring-boot:run
+----
+
+First, you request to see your all book saved:
+The service job process using cpu scheduler returns a stream list of simple five books info. 
+and Let's assume a synchronization operation. It just await processing without using cpu. change this value.(MetricsController.java)
+
+----
+http://localhost:8989
+----
+
+You should now be able to see your request count, and also can see some warn gauge infomation if you have set enough thread block time :
+[source,shell]
+----
+http://localhost:7979/actuator/metrics
+----
+
+using OperatingSystemMXBean methods and options are as follows,[1]
+----
+- getProcessCpuTime : CPU time used by the process on which the Java virtual machine is running in nanoseconds. 
+- getSystemCpuLoad : Returns the "recent cpu usage" for the whole system.
+- getProcessCpuLoad : Returns the "recent cpu usage" for the Java Virtual Machine process. 
+- getTotalPhysicalMemorySize : Returns the total amount of physical memory in bytes.
+- getFreePhysicalMemorySize : Returns the amount of free physical memory in bytes.
+- momentRatio : Percentage of moment CPU Usage Time per a Job processing time 
+----
+
+Reference
+----
+[1]. http://nadeausoftware.com/articles/2008/03/java_tip_how_get_cpu_and_user_time_benchmarking
+----

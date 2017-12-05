@@ -13,5 +13,6 @@
         <module>liquibase-example</module>
         <module>docker-example</module>
     <module>logback-example</module>
+    <module>jvm-metrics-example</module>
   </modules>
 </project>

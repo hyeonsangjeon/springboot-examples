@@ -21,3 +21,7 @@ The link:docker-example/README.adoc[docker-example] shows Spring Boot docker ima
 == logback-example
 
 The link:logback-example/README.adoc[logback-example] shows how to set logback in springboot to make the archive of daily log file with sql result to the application.
+
+== jvm-metrics-example
+
+The link:jvm-metrics-example/README.adoc[jvm-metrics-example] shows how to use Spring Actuator Metrics, CounterService and GaugeService in the application.
