@@ -14,26 +14,24 @@ import com.actuator.repository.BookRepository;
 
 @RestController
 public class ActuatorController {
-  private static final Logger logger = LoggerFactory.getLogger(ActuatorController.class);
-  
-  //Index
-  @RequestMapping(value="/", method = RequestMethod.GET)
-  public ResponseEntity<String> index(){	  	  
-	  return new ResponseEntity<>("Welcome Springboot liquibase", HttpStatus.OK);
-  }
-  
-  //@Bean CommandLineRunner means that it will run after the springboot autoconfiguration.
-  @Bean
-  CommandLineRunner findAll(BookRepository bookRepo) {	  
-	  return args -> {		  		 
-		  bookRepo.findAll().forEach(book ->		  
-		      logger.debug("[MIGRATION DB INFO] : "+book.toString())
-		  );
-	  };
-	  
-  }
-  
-  
-  
+    private static final Logger logger = LoggerFactory.getLogger(ActuatorController.class);
+
+    //Index
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ResponseEntity<String> index() {
+        return new ResponseEntity<>("Welcome Springboot liquibase", HttpStatus.OK);
+    }
+
+    //@Bean CommandLineRunner means that it will run after the springboot autoconfiguration.
+    @Bean
+    CommandLineRunner findAll(BookRepository bookRepo) {
+        return args -> {
+            bookRepo.findAll().forEach(book ->
+                    logger.debug("[MIGRATION DB INFO] : " + book.toString())
+            );
+        };
+
+    }
+
 
 }
