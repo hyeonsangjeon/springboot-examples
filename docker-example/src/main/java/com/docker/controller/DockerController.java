@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DockerController {
-  private static final Logger logger = LoggerFactory.getLogger(DockerController.class);
-  
-  //Index
-  @RequestMapping(value="/", method = RequestMethod.GET)
-  public ResponseEntity<String> index(){
-	  logger.debug("HttpRequestServlet Route");
-	  return new ResponseEntity<>("Welcome Springboot docker running", HttpStatus.OK);
-  }
-       
+    private static final Logger logger = LoggerFactory.getLogger(DockerController.class);
+
+    //Index
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ResponseEntity<String> index() {
+        logger.debug("HttpRequestServlet Route");
+        return new ResponseEntity<>("Welcome Springboot docker running", HttpStatus.OK);
+    }
+
 }
