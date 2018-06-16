@@ -1,68 +1,69 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example</groupId>
-  <artifactId>logback-example</artifactId>
-  <version>0.3</version>
-  <packaging>jar</packaging>
-  
-  <name>logback-example</name>
-  <description>Daily logfile logback Demo Project for Spring Boot</description>
-  
-  <parent>
-      <groupId>org.springframework.boot</groupId>
-	  <artifactId>spring-boot-starter-parent</artifactId>
-      <version>1.5.8.RELEASE</version>
-  </parent>
-       
-  <properties>    
-    <java.version>1.8</java.version>      
-  </properties>
-  
-  <dependencies>
-     <!--This is important logback loging log4jdbc -->
-      <dependency>
-    	      <groupId>org.bgee.log4jdbc-log4j2</groupId>
-    	      <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-    	      <version>1.16</version>
-	  </dependency>
-     <!-- Spring for Web Monitoring -->  
-	  <dependency>
-	      <groupId>org.springframework.boot</groupId>
-	      <artifactId>spring-boot-starter-web</artifactId>
-	  </dependency>
-	  <!-- Spring for Embeded H2 DB -->
-	  <dependency>
-	      <groupId>com.h2database</groupId>
-		  <artifactId>h2</artifactId>		  
-	  </dependency>
-	  <!-- Spring for JPA SPEC -->
-	  <dependency>
-  		  <groupId>org.springframework.boot</groupId>
-		  <artifactId>spring-boot-starter-data-jpa</artifactId>
-      </dependency>
-      <!-- Example sql logging for flyway -->    
-      <dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-      </dependency>
-      <!-- Utility -->
-      <dependency>
-	      <groupId>org.projectlombok</groupId>
-		  <artifactId>lombok</artifactId>
-		  <optional>true</optional>
-      </dependency>
-      <!-- mysql connector -->
-      <dependency>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>logback-example</artifactId>
+    <version>0.3</version>
+    <packaging>jar</packaging>
+
+    <name>logback-example</name>
+    <description>Daily logfile logback Demo Project for Spring Boot</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.8.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!--This is important logback loging log4jdbc -->
+        <dependency>
+            <groupId>org.bgee.log4jdbc-log4j2</groupId>
+            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+            <version>1.16</version>
+        </dependency>
+        <!-- Spring for Web Monitoring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Spring for Embeded H2 DB -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <!-- Spring for JPA SPEC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- Example sql logging for flyway -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+        <!-- Utility -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- mysql connector -->
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-      </dependency>          	  
-      <dependency>
-      	<groupId>junit</groupId>
-      	<artifactId>junit</artifactId>      	
-      	<scope>test</scope>
-    	</dependency>
-  </dependencies>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

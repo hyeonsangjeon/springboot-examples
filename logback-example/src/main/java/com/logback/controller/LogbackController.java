@@ -19,28 +19,28 @@ import com.logback.repository.BookRepository;
 
 @RestController
 public class LogbackController {
-  private static final Logger logger = LoggerFactory.getLogger(LogbackController.class);
-  
-  @Autowired
-  BookRepository bookRepository;  
+    private static final Logger logger = LoggerFactory.getLogger(LogbackController.class);
 
-  
-  //Index
-  @RequestMapping(value="/", method = RequestMethod.GET)  
-  public List<Book> getAll(){
-      Iterable<Book> all = bookRepository.findAll();
-	  return StreamSupport.stream(all.spliterator(), false).collect(toList());			
-  }
-  
-  
-//@Bean CommandLineRunner means that it will run after the springboot autoconfiguration.
-  @Bean
-  CommandLineRunner findAll(BookRepository bookRepo) {	  
-	  return args -> {		  		 
-		  bookRepo.findAll().forEach(book ->		  
-		      logger.debug("[MIGRATION DB INFO] : "+book.toString())
-		  );
-	  };
-	  
-  }     
+    @Autowired
+    BookRepository bookRepository;
+
+
+    //Index
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public List<Book> getAll() {
+        Iterable<Book> all = bookRepository.findAll();
+        return StreamSupport.stream(all.spliterator(), false).collect(toList());
+    }
+
+
+    //@Bean CommandLineRunner means that it will run after the springboot autoconfiguration.
+    @Bean
+    CommandLineRunner findAll(BookRepository bookRepo) {
+        return args -> {
+            bookRepo.findAll().forEach(book ->
+                    logger.debug("[MIGRATION DB INFO] : " + book.toString())
+            );
+        };
+
+    }
 }
