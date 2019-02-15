@@ -1,0 +1,14 @@
+# Spring Boot Mybatis junit test example
+
+This example shows how to use liquibase in springboot to manage the history of changes to the database schema as a result of application changes., having:
+
+- Spring Mybatis Junit Setting, for test : DataSourceConfig, DAO depend on template config class
+- Spring liquibase h2-db(embeded), mysql
+
+
+Try execute liquibase example to make DDL and DCL &  before try this example.:
+
+Then, try run junit test in /test/java/mybatis/MybatisQueryTest
+
+Reference
+- [1]. http://www.liquibase.org/documentation/changes/

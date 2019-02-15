@@ -25,3 +25,7 @@ The link:logback-example/README.adoc[logback-example] shows how to set logback i
 == jvm-metrics-example
 
 The link:jvm-metrics-example/README.adoc[jvm-metrics-example] shows how to use Spring Actuator Metrics, CounterService and GaugeService in the application.
+
+== mybatis-junit-test-example
+
+The link:mybatis-junit-test-example/README.adoc[mybatis-junit-test-example] shows how to mybatis DAO tempalte junit test in the application.
