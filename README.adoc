@@ -28,4 +28,4 @@ The link:jvm-metrics-example/README.adoc[jvm-metrics-example] shows how to use S
 
 == mybatis-junit-test-example
 
-The link:mybatis-junit-test-example/README.adoc[mybatis-junit-test-example] shows how to mybatis DAO tempalte junit test in the application.
+The link:mybatis-junit-test-example[mybatis-junit-test-example] shows how to mybatis DAO tempalte junit test in the application.
